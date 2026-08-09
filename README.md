@@ -51,7 +51,9 @@ Nucleo-F446RE 교육용 보드를 활용하여 GPIO, 통신, 타이머,
 
 ## 폴더 구조
 
-​​```
+​​## 폴더 구조
+
+```
 STM32-nucleo-practice/
 │
 ├── README.md
@@ -78,7 +80,7 @@ STM32-nucleo-practice/
 ├── 16_freertos_multi/
 ├── 17_sensor_uart_system/
 └── 18_freertos_integration/
-​```
+```
 
 ## 각 예제 문서화 규칙
 

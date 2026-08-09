@@ -51,20 +51,18 @@ Nucleo-F446RE 교육용 보드를 활용하여 GPIO, 통신, 타이머,
 
 ## 폴더 구조
 
-\`\`\`
+## 폴더 구조
+
+​```
 STM32-nucleo-practice/
 │
 ├── README.md
-├── docs/                    (학습 정리 문서)
-│   ├── setup-guide.md       (개발환경 설정)
-│   ├── pin-reference.md     (핀 참조표)
-│   └── troubleshooting.md   (삽질 기록)
+├── docs/
+│   ├── setup-guide.md
+│   ├── pin-reference.md
+│   └── troubleshooting.md
 │
-├── 01_led_blink/            (LED 깜빡이기)
-│   ├── src/
-│   ├── inc/
-│   └── README.md
-│
+├── 01_led_blink/
 ├── 02_button_input/
 ├── 03_uart_hello/
 ├── 04_timer_interrupt/
@@ -82,20 +80,20 @@ STM32-nucleo-practice/
 ├── 16_freertos_multi/
 ├── 17_sensor_uart_system/
 └── 18_freertos_integration/
-\`\`\`
+​```
 
 ## 각 예제 문서화 규칙
 
 모든 예제 폴더는 다음 구조를 따릅니다.
 
-\`\`\`
+```
 예제폴더/
 ├── README.md          (해당 예제 설명)
 ├── src/               (소스 코드)
 ├── inc/               (헤더 파일)
 ├── ioc/               (STM32CubeMX 설정 파일)
 └── media/             (시연 영상/사진)
-\`\`\`
+```
 
 ### 각 README.md 포함 사항
 - 학습 목표

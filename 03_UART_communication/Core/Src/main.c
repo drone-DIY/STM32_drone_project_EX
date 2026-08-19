@@ -44,7 +44,7 @@
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-
+uint8_t rx_data;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -91,7 +91,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_UART_Receive_IT(&huart2, &rx_data, 1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -107,7 +107,16 @@ int main(void)
   }
   /* USER CODE END 3 */
 }
-
+/* USER CODE BEGIN 4 */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    if (huart->Instance == USART2)
+    {
+        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+        HAL_UART_Receive_IT(&huart2, &rx_data, 1);
+    }
+}
+/* USER CODE END 4 */
 /**
   * @brief System Clock Configuration
   * @retval None
